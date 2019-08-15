@@ -33,10 +33,10 @@ class LambdaLogoView: UIView {
         /// Note: elements are drawn on the the screen from back to front
         /// in the order they appear below.
         
-        let viewCenter = CGPoint(x: rect.size.width / 2, y: rect.size.height / 2)
-        let logoBottomPoint = CGPoint(x: viewCenter.x, y: viewCenter.y + 80)
-        let lambdaTopPoint = CGPoint(x: viewCenter.x, y: viewCenter.y - 60)
-        let lambdaLeftPoint = CGPoint(x: viewCenter.x - 45, y: viewCenter.y + 10)
+        let viewCenter       = CGPoint(x: rect.size.width / 2, y: rect.size.height / 2)
+        let logoBottomPoint  = CGPoint(x: viewCenter.x, y: viewCenter.y + 80)
+        let lambdaTopPoint   = CGPoint(x: viewCenter.x, y: viewCenter.y - 60)
+        let lambdaLeftPoint  = CGPoint(x: viewCenter.x - 45, y: viewCenter.y + 10)
         let lambdaRightPoint = CGPoint(x: viewCenter.x + 45, y: viewCenter.y + 10)
         
         if let context = UIGraphicsGetCurrentContext() {
@@ -70,7 +70,6 @@ class LambdaLogoView: UIView {
             context.setLineWidth(6)
             context.setStrokeColor(UIColor.white.cgColor)
             context.addLine(to: CGPoint(x: lambdaTopPoint.x + 6.5, y: lambdaTopPoint.y - 1))
-            //context.addRect(CGRect(x: lambdaTopPoint.x, y: lambdaTopPoint.y + 4, width: 0.8, height: 0.5))
             context.strokePath()
             
             //clean up lambda left point
@@ -83,7 +82,6 @@ class LambdaLogoView: UIView {
             context.closePath()
             context.setFillColor(UIColor.white.cgColor)
             context.fillPath()
-           
             context.strokePath()
             
             //clean up lambda right point
@@ -96,9 +94,7 @@ class LambdaLogoView: UIView {
             context.closePath()
             context.setFillColor(UIColor.white.cgColor)
             context.fillPath()
-            
             context.strokePath()
-            
         }
     }
 }
